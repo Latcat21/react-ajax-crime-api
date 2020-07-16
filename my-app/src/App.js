@@ -32,7 +32,7 @@ class App extends Component {
     this.setState((previousState) => (
       {crimes: previousState.crimes.filter((crime, i) => i !== index )
         }));
-    }
+  }
   
 
 

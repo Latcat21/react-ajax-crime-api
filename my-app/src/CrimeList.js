@@ -5,7 +5,8 @@ const CrimeList = (props) => {
   
   const CrimeList = props.crimes.map((crime, i) => {
     
-    return    <li key={i}>{crime.description}<button onClick={props.deleteItem.bind(null, i)}>Delete</button></li> 
+    return <div className="card m-3 bg-light text-center" >  <p className="card-body text-center p-3" key={i}>{crime.description}<br></br><button className="btn btn-danger m-2" onClick={props.deleteItem.bind(null, i)}>Delete</button></p> 
+    </div>
     
     
   
@@ -15,7 +16,7 @@ const CrimeList = (props) => {
   console.log(props)
   return (
   <div>
-    <h4>Crimes</h4>
+    <h1 className="text-center mt-4 text-dark">Crimes</h1>
     <ul>
       {CrimeList}
     </ul>
